@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="body"> 
+    <div class="preloader" id="preloader">
+        <div class="car">
+            <img src="images/truck-body.png" alt="truck">
+        </div>
+        <div class="wheel">
+            <img src="images/wheel.png" alt="wheel" class="front-wheel">
+            <img src="images/wheel.png" alt="wheel" class="back-wheel">
+        </div>
+        <p>Please wait ...</p>
+    </div>
+<!------------------------------------------------------Navigation bar---------------------------------------------------------->
+    <label class="top-btn" type="button" onclick="topFunction()" id="topBtn" title="Back to top"><i class="fa-solid fa-arrow-up"></i></label>
+    <nav class="navbar">
+        <img class="logo1" src="images/logo-cars.jpg">
+        <div class="nav-links" >
+            <ul class="links" id="myDropdowns">
+                <li class="link active"><a href="#home">Home</a></li>
+                <li class="link"><a href="Page.html">Features</a></li>
+                <li class="link"><a href="Page.html">Pricing</a></li>
+                <li class="link"><a href="Page.html">Blog</a></li>
+                <button class="button1" onclick="openModal('login-section')">Login</button>
+                <button class="button2" onclick="openModal('signup-section')">Sign Up</button>
+            </ul>
+            <button class="drop-btn" onclick="myfunction()"><i class="fa-solid fa-bars" onclick="myfunction()"></i></button>
+        </div>
+    </nav>
+
+<!-------------------------Login Popup------------------------------------>
+
+    <div id="login-section" class="login-section">
+        <div class="login">
+            <div class="login-details">
+                <div class="login-image">
+                    <img src="images/land-rover.png" alt="LR">
+                </div>
+                <div class="login-content">
+                    <h2>Login In Your Account</h2>
+                    <form action="#" method="post">
+                        <label for="loginUsername">Username</label>
+                        <input type="text" id="loginUsername" name="username" required>
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" name="password" required>
+                        <button type="submit" class="modal-btn">Login</button>
+                    </form>
+                    <a>Forget password?</a>
+                </div>
+            </div>
+            <span class="close" onclick="closeModal('login-section')">&times;</span>
+        </div>
+    </div>
+
+<!-----------------------Signup Popup---------------------------------------->
+
+    <div id="signup-section" class="signup-section">
+        <div class="signup">
+            <span class="close" onclick="closeModal('signup-section')">&times;</span>
+            <h2>Sign Up</h2>
+            <form action="#" method="post">
+                <label for="signupUsername">Username</label>
+                <input type="text" id="signupUsername" name="username" required>
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="email" required>
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="password" required>
+                <button type="submit" class="modal-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Open modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        // Close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+
+<!------------------------------------------------------hero-section----------------------------------------------------------->
+    <section class="hero-section" id="Home">
+        <div class="hero-content">
+            <h1 class="hero-heading">Easy And Fast Way To <br><span style="font-weight:550;color: blueviolet;">Rent</span> Your Car</h1>
+            <p class="hero-para" style="padding: 15px;margin-right: 30px;">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Obcaecati nesciunt nihil autem laborum sapiente 
+                eveniet nam et at eius! Animi aliquam dolorem enim odio similique iusto quos 
+                excepturi sed nostrum!
+            </p>
+            <button class="button2" style="margin: 15px;">Rent Car</button>
+        </div>
+        <img class="hero-image" src="images/hero-image.png" alt="bmw">
+    </section>
+<!-----------------------------------------------------pickup-drop------------------------------------------------------------>
+    <section class="pickup-section">
+        <form class="pickup-form">
+            <h2 class ="pickup-head">Discover new rental car deals.</h2>
+            <div class="pickup-place">
+                <input class="pickup-input" id="pickup" type="text" list="places" placeholder="Enter Pick-up Location">
+                <input class="drop-input" id="drop-off" type="text" list="places" placeholder="Enter Drop Location">
+            </div>
+            <datalist id="places">
+                <option value="Ameerpet">Ameerpet</option>
+                <option value="Shamshabad Airport">Shamshabad Airport</option>
+                <option value="Gachibowli">Gachibowli</option>
+                <option value="Jubblie Hills">Jubblie Hills</option>
+                <option value="Vijayawada Bus stand">Vijayawada Bus stand</option>
+                <option value="Vijayawada Railway Station">Vijayawada Railway Station</option>
+                <option value="Vijayawada Benz Circle">Vijayawada Benz Circle</option>
+                <option value="Mangalagiri">Mangalagiri</option>
+                <option value="Tadepalli">Tadepalli</option>
+                <option value="VITAP">VITAP , Inavolu</option>
+                <option value="SRMAP">SRMAP , Inavolu</option>
+                <option value="Guntur Bus Stand">Guntur Bus Stand</option>
+                <option value="Guntur Railway Station">Guntur Railway Station</option>
+            </datalist>
+            <div class="line1">
+                <div class="pickup">
+                    <h3>Pickup</h3>
+                    <input type="datetime-local">
+                </div>
+                <div class="drop">
+                    <h3>Drop</h3>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <div class="pick-up-button" >
+                <div class="slide-button" >
+                    <label for="myCheck" class="switch">
+                        <input type="checkbox" onclick="dropOff()" id="myCheck">
+                        <span class="slider"></span>
+                    </label>
+                    <p class="switch-para">Add Droping location</p>
+                </div>
+                <div class="plantrip-button"><button class="button4" type="submit">Plan Trip</button></div>
+            </div>
+        </form>
+    </section>
+
+<!-------------------------------------------------Popular-Deals-------------------------------------------->
+
+<div class="popular-car" id="popular-car">
+    <h2 class="brands" style="margin-left: 40px; padding-top: 20px;">Popular Cars</h2>
+    <div class="popular">
+        <div class="pop-1">
+            <h3>Mini</h3>
+            <p class="pop-para">Suzuki Celerio or Similar</p>
+            <img  class="pop-img" src="images/car1.png" alt="" height="130px" width="190px">
+            <div class="pop-details">
+                <img src="images/1.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/2.png" alt="" height="35px" width="35px">
+                <p>2</p>
+                <img src="images/3.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/4.png" alt="" height="35px" width="35px">
+                <p>Man</p>
+            </div>
+            <div class="pop-rate">
+                <h3> &#8377; 1399.12</h3>
+                <p class="pop-para">per day</p>
+            </div>
+            <button class="pop-but">View</button> 
+        </div>
+        <div class="pop-1">
+            <h3>Economy</h3>
+            <p class="pop-para">Suzuki Swift or Similar</p>
+            <img class="pop-img" src="images/car2.png" alt="" height="120px" width="195px">
+            <div class="pop-details">
+                <img src="images/1.png" alt="" height="35px" width="35px">
+                <p>5</p>
+                <img src="images/2.png" alt="" height="35px" width="35px">
+                <p>3</p>
+                <img src="images/3.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/4.png" alt="" height="35px" width="35px">
+                <p>Man</p>
+            </div>
+            <div class="pop-rate">
+                <h3> &#8377; 1599.12</h3>
+                <p class="pop-para">per day</p>
+            </div>
+            <button class="pop-but">View</button>
+        </div>
+        <div class="pop-1">
+            <h3>Compact</h3>
+            <p class="pop-para">Volkswagen Virtus or Similar</p>
+            <img class="pop-img" src="images/car3.jpeg" alt="" height="120px" width="190px">
+            <div class="pop-details">
+                <img src="images/1.png" alt="" height="35px" width="35px">
+                <p>5</p>
+                <img src="images/2.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/3.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/4.png" alt="" height="35px" width="35px">
+                <p>Man</p>
+            </div>
+            <div class="pop-rate">
+                <h3> &#8377; 1699.12</h3>
+                <p class="pop-para">per day</p>
+            </div>
+            <button class="pop-but">View</button>
+        </div>
+        <div class="pop-1">
+            <h3>Economy Elite</h3>
+            <p class="pop-para">Audi A1 or Similar</p>
+            <img class="pop-img" src="images/car4.png" alt="" height="125px" width="180px">
+            <div class="pop-details">
+                <img src="images/1.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/2.png" alt="" height="35px" width="35px">
+                <p>5</p>
+                <img src="images/3.png" alt="" height="35px" width="35px">
+                <p>4</p>
+                <img src="images/4.png" alt="" height="35px" width="35px">
+                <p>Auto</p>
+            </div>
+            <div class="pop-rate">
+                <h3> &#8377; 3000.13</h3>
+                <p class="pop-para">per day</p>
+            </div>
+            <button class="pop-but">View</button>
+        </div>
+    </div>
+</div>
+
+<!------------------------------------------------------Cars-Section-------------------------------------------------------------->
+
+<div class="cars-section">
+</div>
+
+<!-----------------------------------------------------Features-section--------------------------------------------------------------->
+
+    <div class="features-section">
+        <div class="features-section1">
+            <div class="features1">
+                <h2 class="brands">Key Amenities</h2>
+                <p class="features-para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Labore natus qui beatae ipsa debitis commodi, eligendi sequi omnis, 
+                    iusto alias eos enim temporibus. Sit esse dolor ad quo reiciendis hic!
+                </p>
+                <a href="">Learn More ></a>
+            </div>
+            <div class="features2">
+                <div class="feature1">
+                    <img  class="feat-logo1" src="images/cancel.jpg" alt="">
+                    <p>With our hassle-free cancellation policy, you can make changes to your reservation without any penalty or fees, ensuring peace of mind for your travel plans.</p>
+                </div>
+                <div class="feature2">
+                    <img  class="feat-logo1" src="images/tow.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                        eum consectetur autem, molestias labore mollitia.</p>
+                </div>
+                <div class="feature3">
+                    <img  class="feat-logo2" src="images/n6byw5h9.png" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+                        eum consectetur autem, molestias labore mollitia.</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+<!-----------------------------------------------------Info-Section------------------------------------------------------->
+    <div class="Info-section">
+        <div class="Info-1">
+            <img src="images/68-Customer-Support (1).png" alt="" class="info-images">
+            <h3 class="info-head">24x7 Customer Support</h3>
+        </div>
+        <div class="Info-2">
+            <img src="images/53-Economy.png" alt="" class="info-images">
+            <h3 class="info-head">No Hidden Charges</h3>
+        </div>
+        <div class="Info-3">
+            <img src="images/252-Customer-Review (1).png" alt="" class="info-images">
+            <h3 class="info-head">5 million+ Reviews</h3>
+        </div>
+    </div>
+<!-----------------------------------------------------Brand-Patners------------------------------------------------------>
+    <div class="clients-section">
+        <div class="clients-section1">
+            <h2 class="brands">Connecting You To The Biggest Brands In Car Rental</h2>
+            <div class="clients">
+                <img class="logos" src="images/logo21.jpg" alt="">
+                <img class="logos" src="images/logo22.webp" alt="">
+                <img class="logos" src="images/logo23.jpg" alt="">
+                <img class="logos" src="images/logo24.jpg" alt="">
+            </div>
+        </div>
+    </div>
+<!-----------------------------------------------------Location------------------------------------------------------>
+    <div class="location" id="location">
+        <h1 class="hero-heading">Find Us On The Map</h1>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5333.652223613607!2d80.51209928798563!3d16.528174116967783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35edb7c2d61369%3A0xd825c198ad2054fd!2sSree%20Nivasam%20%7C%20Boys%20%26%20Working%20men&#39;s%20Hostel!5e0!3m2!1sen!2sin!4v1708778254393!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+<!-----------------------------------------------------Footer--------------------------------------------------------->
+    <footer class="footer">
+        <div class="footer1">
+            <img class="logo1" src="images/logo-cars.jpg">
+            <div class="footer-link1">
+                <ul>
+                    <li><h3><i class="fa-solid fa-circle-info"> &nbsp; </i>INFORMATION</h3></li>
+                    <li><a href="#">Car Models</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">IQAC</a></li>
+                </ul>
+            </div>
+            <div class="footer-link1">
+                <ul>
+                    <li><h3><i class="fa-solid fa-link"></i> &nbsp; QUICK LINKS</h3></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#popular-car">Pricing</a></li>
+                    <li><a href="#">Branches</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#location">How to Reach WheelsAway</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer2">
+            <h3 class="footer-head">SUBSCRIBE</h3>
+            <input type="text" class="footer-input" placeholder="Get Updated">
+            
+        </div>
+    </footer> 
+    <hr style="border: 1.3px solid rgba(108, 86, 86, 0.42);margin: 20px;">
+    <div class="footer-media">
+        <p>© 2024 WheelsAway. All rights reserved</p>
+        <div class="media-links">
+            <img class="image1" style="margin-right:8px ;" src="images/facebook.png" height="38px" width="38px" alt="">
+            <img class="image1" src="images/insta.png" alt="" height="35px" width="35px">
+            <img class="image1" src="images/x.png" alt="" height="35px" width="50px">
+        </div>
+    </div>
+<!---------------------click on drop down---------------------->
+    <script> 
+        function myfunction(){
+            document.getElementById("myDropdowns").classList.toggle("show")
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches(".drop-btn")) {
+                var  dropdowns = document.getElementsByClassName("links");
+                var i;
+                for (i=0; i< dropdowns.length ;i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        let mybutton=document.getElementById("topBtn");
+        window.onscroll=function(){scrollFunction()};
+        function scrollFunction(){
+            if(document.body.scrollTop> 30 || document.documentElement.scrollTop>30){
+                mybutton.style.display="block";
+            } else{
+                mybutton.style.display="none";
+            }
+        }
+        function topFunction(){
+            document.body.scrollTop=0;
+            document.documentElement.scrollTop=0;
+            document.getElementById("topBtn").style.transition="all 5s";
+        } 
+        function dropOff(){
+            var CheckBox = document.getElementById("myCheck");
+            var dropInput = document.getElementById("drop-off");
+            var pickUp = document.getElementById("pickup");
+            if (CheckBox.checked == true){
+                dropInput.style.display = "block";
+                pickUp.style.width = "47%";
+            }else {
+                dropInput.style.display = "none";
+                pickUp.style.width = "";
+            }
+        }
+
+        window.addEventListener("load" , () => {
+            document.querySelector(".preloader").classList.add("preloader--hidden");
+        });
+    </script>
+</body>
+</html>
