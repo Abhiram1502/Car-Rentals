@@ -492,7 +492,7 @@ input:checked + .slider:before {
     margin: 20px;
     border: none;
     width: 80vw;
-    height: 70vh;
+    height: 350px;
 }
 
 /*-------------Footer-----------------------------------*/
