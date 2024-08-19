@@ -13,7 +13,7 @@
     position: fixed;
     z-index: 100;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;  
 }
@@ -123,7 +123,7 @@ nav{
     padding-left: 20px;
     padding-right: 20px;
     padding-top:8px ; 
-    padding-bottom:8px;
+    padding-bottom: 8px;
 }
 .nav-links{
     text-align: center;
@@ -271,6 +271,7 @@ ul{
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 10px;
+    max-width: 500px;
     width: 100%;
     height: 20px;
 }
@@ -492,7 +493,7 @@ input:checked + .slider:before {
     margin: 20px;
     border: none;
     width: 80vw;
-    height: 350px;
+    height: 300px;
 }
 
 /*-------------Footer-----------------------------------*/
@@ -535,6 +536,14 @@ h3{
     display: flex;
     flex-direction: column;
     padding: 20px;
+}
+.subm-but{
+    padding: 9px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 5px;
 }
 .footer-media{
     display: flex;
@@ -842,6 +851,13 @@ h3{
     .not-found-section .page-found-para{
         font-size: 9px;
     }
+    .popular-car .popular{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pop-1{
+        margin: 10px;
+    }
 }
 @media (max-width:395px){
     .hero-image{
@@ -957,6 +973,59 @@ h3{
         margin-top: 0px;
         margin-bottom: 10px;
     }
+    .popular-car .popular{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 10px;
+        margin: 10px;
+    }
+    .popular-car .pop-1{
+        height: 220px;
+        width: 120px;
+        border: 1px solid black;
+        margin: 5px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+    }
+    .popular-car .car-head{
+        font-size: 15px;
+    }
+    .popular-car .pop-details img{
+        height: 20px;
+        width: 20px;
+    }
+    .popular-car .pop-details p{
+        font-size: 10px;
+    }
+    .popular-car .pop-img{
+        height: 70px;
+        width: 110px;
+    }
+    .popular-car .pop-details{
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        height: 10px;
+    }
+    .popular-car .pop-rate{
+        align-self: right;
+        font-size: 12px;
+    }
+    .popular-car .pop-but{
+        width: 100%;
+        background-color: #5d89e7;
+        border-radius: 5px;
+        padding:0px;
+        border: none;
+        font-size: 10px;
+        color: white;
+        margin-top: 10px;
+    }
+    .popular-car .pop-para{
+        font-size: 10px;
+        margin-left: 3px;
+    }
 }
 
 /*--------Page not found-------------*/
@@ -977,6 +1046,7 @@ h3{
     color: white;
     background-color: rgb(48, 87, 163);
 }
+
 
 
 
@@ -1085,20 +1155,23 @@ input[type="password"] {
     background-color: rgba(245, 245, 245, 0.804);
 }
 .popular{
-    display:flex;
-    flex-direction: row;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     padding-bottom: 50px;
-    height: 350px;
 }
 .pop-1{
-    height: 90%;
-    width: 20%;
+    height: 310px;
+    width: 200px;
     border: 1px solid black;
-    margin: 2.25%;
+    margin: 30px;
     border-radius: 8px;
     padding: 12px;
     background-color: white;
+}
+.pop-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .pop-details{
     display: inline-flex;
