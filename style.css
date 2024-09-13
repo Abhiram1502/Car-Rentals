@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=SUSE:wght@100..800&display=swap');
 *{
     margin: 0;
     font-family: "Roboto", sans-serif;
@@ -539,11 +540,18 @@ h3{
 }
 .subm-but{
     padding: 9px;
+    padding-bottom: 9px;
     background-color: blueviolet;
     color: white;
     font-size: 15px;
     border: 0px;
     border-radius: 5px;
+    margin-left: 5px;
+}
+.sub-but{
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 .footer-media{
     display: flex;
@@ -702,6 +710,75 @@ h3{
         margin-top: 0px;
         margin-bottom: 20px;
     }
+    .popular-car{
+        padding: 15px;
+    }
+    .popular-car .pop-1{
+        height: 270px;
+        width: 150px;
+        border: 1px solid black;
+        margin: 5px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: white;
+    }
+    .popular-car .car-head{
+        font-size: 15px;
+    }
+    .popular-car .pop-details img{
+        height: 26px;
+        width: 26px;
+    }
+    .popular-car .pop-details p{
+        font-size: 14px;
+    }
+    .popular-car .pop-img{
+        height: 85px;
+        width: 125px;
+    }
+    .popular-car .pop-but{
+        width: 100%;
+        background-color: #5d89e7;
+        border-radius: 5px;
+        padding:5px;
+        border: none;
+        font-size: 13px;
+        color: white;
+        margin-top: 10px;
+    }
+    .popular-car .pop-para{
+        font-size: 14px;
+        margin-left: 3px;
+    }
+    .pop-image{
+        height: 105px;
+        width: 125px;
+    }
+    .blog-section .blog-images img{
+        height: 145px;
+        width: 220px;
+        margin: 5px;
+    }
+    .blog-section .blog .blog-list{
+        margin: 3px;
+    }
+    .blog-section .blog{
+        padding: 10px;
+    }
+    .blog-section .blog p{
+        margin: 4px;
+    }
+    .blog-section .high{
+        margin: 1px;
+    }
+    .blog-section .blog .blog-head{
+        margin: 5px;
+        font-weight: 600;
+        font-size: 26px;
+    }
+    .blog-section .blog .blog-para{
+        margin: 10px;
+    }
 }
 @media (max-width:568px){
     .hero-image{
@@ -858,6 +935,48 @@ h3{
     .pop-1{
         margin: 10px;
     }
+    .blog-section .blog-images img{
+        height: 140px;
+        width: 280px;
+        margin: 5px;
+    }
+    .blog-section .blog-images{
+        flex-direction: column;
+    }
+    .blog-section .blog .blog-list{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .blog-section .blog .order{
+        margin: 0px;
+        font-size: 15px;
+    }
+    .blog-section .blog h3{
+        margin: 3px;
+        font-size: 14px;
+    }
+    .blog-section .blog li{
+        margin: 3px;
+        font-size: 14px;
+    }
+    .blog-section .blog{
+        padding: 10px;
+    }
+    .blog-section .blog p{
+        margin: 4px;
+        font-size: 14px;
+    }
+    .blog-section .high{
+        margin: 1px;
+    }
+    .blog-section .blog .blog-head{
+        margin: 3px;
+        font-weight: 600;
+        font-size: 21px;
+    }
+    .blog-section .blog .blog-para{
+        margin: 8px;
+    }
 }
 @media (max-width:395px){
     .hero-image{
@@ -1002,6 +1121,9 @@ h3{
         height: 70px;
         width: 110px;
     }
+    #bother-1{
+        height: 75px;
+    }
     .popular-car .pop-details{
         display: inline-flex;
         flex-direction: row;
@@ -1025,6 +1147,16 @@ h3{
     .popular-car .pop-para{
         font-size: 10px;
         margin-left: 3px;
+    }
+    .blog-section .blog-images img{
+        height: 130px;
+        width: 260px;
+        margin: 5px;
+    }
+}
+@media (max-width:1000px){
+    #popular-car .popular .pop-1{
+        margin: 5px;
     }
 }
 
@@ -1158,12 +1290,13 @@ input[type="password"] {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding-bottom: 50px;
+    margin-left: 20px;
 }
 .pop-1{
-    height: 310px;
+    height: 320px;
     width: 200px;
     border: 1px solid black;
-    margin: 30px;
+    margin: 10px;
     border-radius: 8px;
     padding: 12px;
     background-color: white;
@@ -1192,6 +1325,62 @@ input[type="password"] {
     margin-top: 10px;
 }
 .pop-para{
-    font-size: 14px;
+    font-size: 17px;
     margin-left: 5px;
+}
+
+
+/*-------------Blog-section------------*/
+
+.blog-list{
+    list-style: number;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px;
+}
+.blog-section{
+    background-color: rgba(250, 235, 215, 0.221);
+}
+.blog h3{
+    font-family: "SUSE", sans-serif;
+}
+.blog{
+    padding: 30px;
+}
+.blog p{
+    margin: 8px;
+    font-family: "SUSE", sans-serif;
+}
+.high{
+    list-style: disc;
+    font-family: "SUSE", sans-serif;
+    margin: 6px;
+}
+.blog ul{
+    display: block;
+}
+.blog .blog-head{
+    margin: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "SUSE", sans-serif;
+}
+.blog li{
+    font-family: "SUSE", sans-serif;
+}
+.blog .blog-para{
+    margin: 15px;
+}
+.blog-images img{
+    height: 200px;
+    width: 370px;
+    margin: 5px;
+}
+.blog-images{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.blog-s2{
+    background-color: white;
 }
