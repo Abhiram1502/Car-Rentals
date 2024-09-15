@@ -168,7 +168,7 @@ ul{
     text-decoration: none;
     color: black;
 }
-.drop-btn{
+#drop-btn{
     display: none;
 }
 .button1{
@@ -225,6 +225,10 @@ ul{
     color: white;
     border: none;
     margin-left: 15px;
+}
+.button2 a{
+    color: white;
+    text-decoration: none;
 }
 .button2:hover{
     transform: scale(1.04); 
@@ -497,6 +501,53 @@ input:checked + .slider:before {
     height: 300px;
 }
 
+
+
+.app-ribbon{
+    background-color: #0082CE;
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 12px;
+    display:flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+.ribbon-logo{
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+}
+.ribbon-head{
+    margin:0px;
+    font-size: 24px;
+}
+.ribbon-para{
+    margin-left: 4px;
+    font-size: 16px;
+}
+.app-ribbon-head{
+    font-size: 10px;
+
+}
+.ribbon1{
+    display: flex;
+    flex-direction: row;
+}
+.app-ribbon-para{
+    font-size:15px ;
+}
+.app-link1{
+    background-color: black;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 8px;
+    width: 100px;
+}
 /*-------------Footer-----------------------------------*/
 
 footer{
@@ -626,7 +677,7 @@ h3{
         background-color: white;
         width: 90%;
     }
-    .drop-btn{
+    #drop-btn{
         display: block;
         margin: 16px;
         padding: 10px;
@@ -729,6 +780,11 @@ h3{
         height: 26px;
         width: 26px;
     }
+    .popular-car .brands{
+        margin-left: 14px;
+        font-size: 22px; 
+        padding: 10px;
+    }
     .popular-car .pop-details p{
         font-size: 14px;
     }
@@ -779,6 +835,41 @@ h3{
     .blog-section .blog .blog-para{
         margin: 10px;
     }
+    .app-ribbon{
+        margin: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        color: white;
+    }
+    .ribbon-logo{
+        height: 70px;
+        width: 70px;
+    }
+    .ribbon-head{
+        margin:0px;
+        font-size: 20px;
+    }
+    .ribbon-para{
+        margin-left: 4px;
+        font-size: 14px;
+    }
+    .app-ribbon-head{
+        font-size: 8px;
+    
+    }
+    .app-ribbon-para{
+        font-size:12px ;
+    }
+    .app-link1{
+        background-color: black;
+        margin: 5px;
+        padding: 5px;
+        border-radius: 6px;
+        width: 70px;
+    }
 }
 @media (max-width:568px){
     .hero-image{
@@ -816,11 +907,11 @@ h3{
         background-color: transparent;
         background-image: linear-gradient(rgba(254, 254, 255, 0.808),rgba(255, 255, 255, 0.813));
     }
-    .drop-btn{
+    #drop-btn{
         display: block;
         margin: 16px;
         padding: 10px;
-        height: 35px;
+        height: 16px;
         border: 0.2px solid black;
         border-radius: 5px;
     }
@@ -907,6 +998,11 @@ h3{
         font-size: 20px;
         font-weight: 600;
     }
+    .popular-car .brands{
+        margin-left: 14px;
+        font-size: 20px; 
+        padding: 10px;
+    }
     .info-images{
         height: 123px;
         width: 123px;
@@ -976,6 +1072,39 @@ h3{
     }
     .blog-section .blog .blog-para{
         margin: 8px;
+    }
+    .app-ribbon{
+        margin: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 8px;
+        color: white;
+    }
+    .ribbon-logo{
+        height: 50px;
+        width: 50px;
+    }
+    .ribbon-head{
+        margin:0px;
+        font-size: 14px;
+    }
+    .ribbon-para{
+        margin-left: 4px;
+        font-size: 10px;
+    }
+    .app-ribbon-head{
+        font-size: 5px;
+    }
+    .app-ribbon-para{
+        font-size:8px ;
+    }
+    .app-link1{
+        margin: 4px;
+        padding: 4px;
+        border-radius: 5px;
+        width: 50px;
     }
 }
 @media (max-width:395px){
@@ -1098,6 +1227,11 @@ h3{
         padding-bottom: 10px;
         margin: 10px;
     }
+    #popular-car .brands{
+        margin-left: 14px;
+        font-size: 14px; 
+        padding-top: 10px;
+    }
     .popular-car .pop-1{
         height: 220px;
         width: 120px;
@@ -1152,6 +1286,35 @@ h3{
         height: 130px;
         width: 260px;
         margin: 5px;
+    }
+    .ribbon-logo{
+        height: 40px;
+        width: 40px;
+    }
+    .ribbon-head{
+        font-size: 11px;
+    }
+    .ribbon-para{
+        margin-left: 4px;
+        font-size: 8px;
+    }
+    .app-ribbon-head{
+        font-size: p4x;
+    }
+    .app-ribbon-para{
+        font-size:7px ;
+    }
+    .app-link1{
+        margin: 3px;
+        padding: 3px;
+        border-radius: 3px;
+        width: 40px;
+    }
+    .app-ribbon{
+        margin: 10px;
+        padding: 8px;
+        border-radius: 8px;
+        color: white;
     }
 }
 @media (max-width:1000px){
@@ -1282,7 +1445,11 @@ input[type="password"] {
 }
 
 /*-----------------------------------*/
-
+.popular-car .brands{
+    margin-left: 14px;
+    font-size: 30px; 
+    padding: 20px;
+}
 .popular-car{
     background-color: rgba(245, 245, 245, 0.804);
 }

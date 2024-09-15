@@ -34,7 +34,7 @@
                 <button class="button1" onclick="openModal('login-section')">Login</button>
                 <button class="button2" onclick="openModal('signup-section')">Sign Up</button>
             </ul>
-            <button class="drop-btn" onclick="myfunction()"><i class="fa-solid fa-bars" onclick="myfunction()"></i></button>
+            <i id="drop-btn" onclick="myfunction()" class="fa-solid fa-bars"></i>
         </div>
     </nav>
 <!--------------------------------------Ribbon-section---------------------------------->
@@ -81,7 +81,7 @@
                     <li class="high">Wander through Old Delhi's vibrant streets.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/blog21.png" alt="">
+                    <img loading="lazy" src="images/blog21.png" alt="">
                     <img src="images/blog22.png" alt="">
                     <img src="images/blog23.png" alt="">
                 </div>
@@ -212,52 +212,6 @@
         </div>
     </div>
 <!---------------------click on drop down---------------------->
-    <script> 
-        function myfunction(){
-            document.getElementById("myDropdowns").classList.toggle("show")
-        }
-        window.onclick = function(event) {
-            if (!event.target.matches(".drop-btn")) {
-                var  dropdowns = document.getElementsByClassName("links");
-                var i;
-                for (i=0; i< dropdowns.length ;i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        let mybutton=document.getElementById("topBtn");
-        window.onscroll=function(){scrollFunction()};
-        function scrollFunction(){
-            if(document.body.scrollTop> 30 || document.documentElement.scrollTop>30){
-                mybutton.style.display="block";
-            } else{
-                mybutton.style.display="none";
-            }
-        }
-        function topFunction(){
-            document.body.scrollTop=0;
-            document.documentElement.scrollTop=0;
-            document.getElementById("topBtn").style.transition="all 5s";
-        } 
-        function dropOff(){
-            var CheckBox = document.getElementById("myCheck");
-            var dropInput = document.getElementById("drop-off");
-            var pickUp = document.getElementById("pickup");
-            if (CheckBox.checked == true){
-                dropInput.style.display = "block";
-                pickUp.style.width = "47%";
-            }else {
-                dropInput.style.display = "none";
-                pickUp.style.width = "";
-            }
-        }
-
-        window.addEventListener("load" , () => {
-            document.querySelector(".preloader").classList.add("preloader--hidden");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

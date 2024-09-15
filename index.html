@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>WheelsAway Car-rentals</title> 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,13 +28,13 @@
         <div class="nav-links" >
             <ul class="links" id="myDropdowns">
                 <li class="link active"><a href="#home">Home</a></li>
-                <li class="link"><a href="Page.html">Features</a></li>
+                <li class="link"><a href="Page.html">Manage Booking</a></li>
                 <li class="link"><a href="Page.html">Pricing</a></li>
                 <li class="link"><a href="blog.html">Blog</a></li>
                 <button class="button1" onclick="openModal('login-section')">Login</button>
                 <button class="button2" onclick="openModal('signup-section')">Sign Up</button>
             </ul>
-            <button class="drop-btn" onclick="myfunction()"><i class="fa-solid fa-bars" onclick="myfunction()"></i></button>
+            <i id="drop-btn" onclick="myfunction()" class="fa-solid fa-bars"></i>
         </div>
     </nav>
 
@@ -109,7 +109,7 @@
                 eveniet nam et at eius! Animi aliquam dolorem enim odio similique iusto quos 
                 excepturi sed nostrum!
             </p>
-            <button class="button2" style="margin: 15px;">Rent Car</button>
+            <button class="button2"style ="margin: 15px;"><a href="#popular-car" >Rent Car</a></button>
         </div>
         <img class="hero-image" src="images/hero-image.png" alt="bmw">
     </section>
@@ -161,8 +161,8 @@
 
 <!-------------------------------------------------Popular-Deals-------------------------------------------->
 
-<div class="popular-car" id="popular-car">
-    <h2 class="brands" style="margin-left: 40px; padding-top: 20px;">Popular Cars</h2>
+<section class="popular-car" id="popular-car">
+    <h2 class="brands">Popular Cars</h2>
     <div class="popular">
         <div class="pop-1">
             <h3  class="car-head">Mini</h3>
@@ -249,7 +249,7 @@
             <button class="pop-but">View</button>
         </div>
     </div>
-</div>
+</section>
 
 <!------------------------------------------------------Cars-Section-------------------------------------------------------------->
 
@@ -319,6 +319,32 @@
         <h1 class="hero-heading">Find Us On The Map</h1>
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5333.652223613607!2d80.51209928798563!3d16.528174116967783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35edb7c2d61369%3A0xd825c198ad2054fd!2sSree%20Nivasam%20%7C%20Boys%20%26%20Working%20men&#39;s%20Hostel!5e0!3m2!1sen!2sin!4v1708778254393!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+<!-----------------------------------------------------Location------------------------------------------------------>
+    <section class="ribbon">
+        <div class="app-ribbon">
+            <div class="ribbon1">
+                <img  class="ribbon-logo" src="images/logocar.jpg" alt=" ">
+                <div style="margin: 5px;">
+                    <h3 class="ribbon-head">Download Our App</h3>
+                    <p class="ribbon-para">Book and manage your booking on the go</p>
+                </div>
+            </div>
+            <div class="ribbon1">
+                <img class="ribbon-logo" src="images/qr.png" >
+                <div>
+                    <div class="app-link1">
+                        <p class="app-ribbon-head">GET IT ON</p>
+                        <p class="app-ribbon-para">Google Play</p>
+                    </div>
+                    <div class="app-link1">
+                        <p class="app-ribbon-head">Download on the</p>
+                        <p class="app-ribbon-para">App Store</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
 <!-----------------------------------------------------Footer--------------------------------------------------------->
     <footer class="footer">
         <div class="footer1">
@@ -326,7 +352,7 @@
             <div class="footer-link1">
                 <ul>
                     <li><h3><i class="fa-solid fa-circle-info"> &nbsp; </i>INFORMATION</h3></li>
-                    <li><a href="#">Car Models</a></li>
+                    <li><a href="#popular-car">Car Models</a></li>
                     <li><a href="#">Franchise</a></li>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">IQAC</a></li>
@@ -361,52 +387,6 @@
         </div>
     </div>
 <!---------------------click on drop down---------------------->
-    <script> 
-        function myfunction(){
-            document.getElementById("myDropdowns").classList.toggle("show")
-        }
-        window.onclick = function(event) {
-            if (!event.target.matches(".drop-btn")) {
-                var  dropdowns = document.getElementsByClassName("links");
-                var i;
-                for (i=0; i< dropdowns.length ;i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        let mybutton=document.getElementById("topBtn");
-        window.onscroll=function(){scrollFunction()};
-        function scrollFunction(){
-            if(document.body.scrollTop> 30 || document.documentElement.scrollTop>30){
-                mybutton.style.display="block";
-            } else{
-                mybutton.style.display="none";
-            }
-        }
-        function topFunction(){
-            document.body.scrollTop=0;
-            document.documentElement.scrollTop=0;
-            document.getElementById("topBtn").style.transition="all 5s";
-        } 
-        function dropOff(){
-            var CheckBox = document.getElementById("myCheck");
-            var dropInput = document.getElementById("drop-off");
-            var pickUp = document.getElementById("pickup");
-            if (CheckBox.checked == true){
-                dropInput.style.display = "block";
-                pickUp.style.width = "47%";
-            }else {
-                dropInput.style.display = "none";
-                pickUp.style.width = "";
-            }
-        }
-
-        window.addEventListener("load" , () => {
-            document.querySelector(".preloader").classList.add("preloader--hidden");
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
