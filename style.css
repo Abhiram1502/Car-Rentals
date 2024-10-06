@@ -762,9 +762,7 @@ h3{
     background-color: rgba(138, 51, 220, 0.95);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
+#loginUsername,#loginPassword{
     width: 80%;
     padding: 9px;
     margin: 12px 0;
@@ -1315,7 +1313,7 @@ input[type="password"] {
         font-size: 17px;
     }
     .pickup-input{
-        height: 5px;
+        height: 3px;
         margin-top: 3px;
     }
     .drop-input{
@@ -1527,9 +1525,7 @@ input[type="password"] {
         font-size: 13px;
         margin-top: 10px;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    #loginUsername,#loginPassword{
         width: 90%;
         padding: 4px;
         margin: 5px 0;
@@ -1811,7 +1807,7 @@ input[type="password"] {
         margin-top: 25%;
         margin-left: 7%;
         margin-right: 7%;
-        height: 45%;
+        height: 240px;
         width: 85%;
     }
     .login-content,.signup-content{
@@ -1825,9 +1821,7 @@ input[type="password"] {
         font-size: 10px;
         margin-top: 8px;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    #loginUsername,#loginPassword{
         width: 95%;
         padding: 2px;
         margin: 4px 0;
