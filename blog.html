@@ -41,6 +41,64 @@
 <section>
 
 </section>
+<!-------------------------Login Popup------------------------------------>
+
+<div id="login-section" class="login-section">
+    <div class="login">
+        <div class="login-details">
+            <span class="close" onclick="closeModal('login-section')">&times;</span>
+            <div class="login-content">
+                <h2 class="login-head">Welcome Back!</h2>
+                <p class="login-para">Log in now to explore all the features and benifits of our platform and see what's new</p>
+                <form action="#" method="post" class="login-form">
+                    <input type="text" id="loginUsername" name="username" required>
+                    <label id="login-label1" for="loginUsername">Enter your Email</label>
+                    <input type="password" id="loginPassword" name="password" required>
+                    <label id="login-label2" for="loginPassword">Enter your Password</label>
+                    <div class="login-extras flex" style="justify-content: space-between;">
+                        <div id="login-extra" >
+                            <input id="Remember" type="checkbox">
+                            <label for="Remember">Remember my account</label>
+                        </div>
+                        <a id="login-extra">Forget password?</a>
+                    </div>
+                    <div><button type="submit" class="modal-btn">Login</button></div>
+                </form>
+                <p id="login-extra">Don't have an account<br><a href="">Sign Up</a> >></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-----------------------Signup Popup---------------------------------------->
+
+<div id="signup-section" class="signup-section">
+    <div class="signup">
+        <div class="signup-details">
+            <span class="close" onclick="closeModal('signup-section')">&times;</span>
+            <div class="signup-content">
+                <h2 class="signup-head">Create An Account</h2>
+                <form action="#" method="post" class="signup-form">
+                    <input type="text" id="signupName" name="username" required>
+                    <label id="signup-label1" for="signupUsername">Name</label>
+                    <input type="text" id="signupUsername" name="username" required>
+                    <label id="signup-label2" for="signupUsername">Enter your Email</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                    <label id="signup-label3" for="signupPassword">Enter your Password</label>
+                    <div class="login-extras flex" style="justify-content: space-between;">
+                        <div id="login-extra" >
+                            <input id="Remember" type="checkbox">
+                            <label for="Remember">Remember my account</label>
+                        </div>
+                    </div>
+                    <div><button type="submit" class="modal-btn">SignUp</button></div>
+                </form>
+                <p id="login-extra">Already have an account<br><a href="">Login</a> >></p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--------------------------------------------------Blog-section------------------------------------------------------>
     <div class="blog-section">
         <div class="blog">
@@ -64,9 +122,9 @@
                     <li class="high">Explore the remote Nubra Valley.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/blog11.png" alt="">
-                    <img src="images/blog12.png" alt="">
-                    <img src="images/blog13.png" alt="">
+                    <img loading="lazy" src="images/blog11.png" alt="">
+                    <img loading="lazy" src="images/blog12.png" alt="">
+                    <img loading="lazy" src="images/blog13.png" alt="">
                 </div>
                 <li class="blog-list">Golden Triangle: Delhi, Agra, and Jaipur</li>
                 <p>The Golden Triangle is one of India’s most popular tourist circuits, and renting a car allows you 
@@ -82,8 +140,8 @@
                 </ul>
                 <div class="blog-images">
                     <img loading="lazy" src="images/blog21.png" alt="">
-                    <img src="images/blog22.png" alt="">
-                    <img src="images/blog23.png" alt="">
+                    <img loading="lazy" src="images/blog22.png" alt="">
+                    <img loading="lazy" src="images/blog23.png" alt="">
                 </div>
                 <li class="blog-list">Goa’s Coastal Route</li>
                 <p>Goa is known for its stunning beaches and vibrant nightlife, but there's so much more to explore beyond
@@ -98,9 +156,9 @@
                     <li class="high">Drive through the lush Western Ghats.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/blog31.png" alt="">
-                    <img src="images/blog32.png" alt="">
-                    <img src="images/blog33.png" alt="">
+                    <img loading="lazy" src="images/blog31.png" alt="">
+                    <img loading="lazy" src="images/blog32.png" alt="">
+                    <img loading="lazy" src="images/blog33.png" alt="">
                 </div>
             </ol>
 
@@ -115,8 +173,8 @@
                     <li class="high">Safety features such as airbags and ABS.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/suv.png" alt="">
-                    <img src="images/sedan.png" alt="">
+                    <img loading="lazy" src="images/suv.png" alt="">
+                    <img loading="lazy" src="images/sedan.png" alt="">
                 </div>
                 <h3>For Solo Travelers or Couples</h3>
                 <p>If you're traveling solo or with a partner, a compact car or hatchback is ideal. These vehicles are easy to maneuver, fuel-efficient, and perfect for city exploration and short road trips.</p>
@@ -126,8 +184,8 @@
                     <li class="high">Affordable rental rates.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/compact.png" alt="">
-                    <img src="images/hatchback.png" alt="">
+                    <img loading="lazy" src="images/compact.png" alt="">
+                    <img loading="lazy" src="images/hatchback.png" alt="">
                 </div>
                 <h3>For Business Trips</h3>
                 <p>For business travel, consider renting a premium sedan. These vehicles offer a balance of comfort, style, and professionalism, making them ideal for business travelers who want to travel in comfort and make a good impression.</p>
@@ -137,8 +195,8 @@
                     <li class="high">Advanced infotainment systems.</li>
                 </ul>
                 <div class="blog-images">
-                    <img src="images/luxury_car.png" alt="">
-                    <img src="images/business_sedan.png" alt="">
+                    <img loading="lazy" src="images/luxury_car.png" alt="">
+                    <img loading="lazy" src="images/business_sedan.png" alt="">
                 </div>
             </div>
             <div class="blog-s3">

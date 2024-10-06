@@ -89,7 +89,9 @@
 }*/
 
 /*--------Back To Top-------------------------------------*/
-
+:root{
+    --blue:rgba(137, 43, 226, 0.728);
+}
 .top-btn{
     padding: 15px;
     border-radius: 50%;
@@ -123,7 +125,7 @@ nav{
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top:8px ; 
+    padding-top: 8px; 
     padding-bottom: 8px;
 }
 .nav-links{
@@ -268,7 +270,9 @@ ul{
 .pickup-place{
     display: flex;
     flex-direction: row;
-    width:89%;
+    width:95%;
+    align-self: center;
+    justify-content: space-around;
 }
 .pickup-input{
     padding: 10px;
@@ -281,7 +285,8 @@ ul{
     height: 20px;
 }
 .drop-input{
-    width: 47%;
+    max-width: 500px;
+    width: 40%;
     padding: 10px;
     border-radius: 5px;
     border: 1.5px solid rgb(104, 104, 158);
@@ -633,6 +638,357 @@ h3{
 
 
 
+
+
+/*--------Page not found-------------*/
+
+.not-found-section{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48, 87, 163);
+}
+.page-image{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.page-found-para{
+    padding: 10px;
+    align-self: center;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(48, 87, 163);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.login-section,.signup-section{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.login-details,.signup-details{
+    background-color: aliceblue;
+    width: 43%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.login,.signup{
+    margin-left: 15%;
+    margin-right:15%;
+    margin-top: 5%;
+    border: 1px solid #888;
+    height: 70%;
+    width: 63%;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    background-image: url(images/login-pic.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.login-content,.signup-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    margin-top: 35px;
+    align-items: left;
+}
+.close {
+    color: #5d89e7;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 6px;
+    margin-right: 13px;
+}
+.close:hover,
+.close:focus {
+    transform: scale(1rem);
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.login-image{
+    width: 0%;
+}
+.login-image img{
+    height:250px;
+    width: 400px;
+}
+
+.modal-btn {
+    float: right;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.modal-btn:hover {
+    background-color: rgba(138, 51, 220, 0.95);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 9px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+}
+#signupUsername,#signupPassword,#signupName{
+    width: 80%;
+    padding: 9px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.login-form,.signup-form{
+    display: flex;
+    flex-direction: column;
+}
+#login-label1{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+    transition: 0.2s ease;
+}
+#login-label2{
+    position: absolute;
+    margin-top: 79px;
+    margin-left: 15px;
+    transition: 0.2s ease;
+}
+#loginUsername:focus,#loginUsername:valid{
+    border: 1px solid var(--blue);
+}
+#loginUsername:focus+#login-label1,
+#loginUsername:valid+#login-label1{
+    transform: translate(-15px,-15px) scale(0.8) ;
+    z-index: 1111;
+    height: 15px;
+    padding: 2px;
+    line-height: 15px;
+    background-color: aliceblue;
+}
+#loginPassword:focus,#loginPassword:valid{
+    border: 1px solid black;
+}
+#loginPassword:focus+#login-label2,
+#loginPassword:valid+#login-label2{
+    transform: translate(-15px,-15px) scale(0.8) ;
+    z-index: 1111;
+    height: 15px;
+    padding: 2px;
+    line-height: 15px;
+    background-color: aliceblue;
+}
+#login-extra{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.694);
+    margin-top: 5px;
+}
+.login-head,.signup-head{
+    font-size: 25px;
+    margin: 8px;
+}
+.login-para{
+    font-size: 13px;
+    margin: 8px;
+    color: rgba(0, 0, 0, 0.694);
+}
+#signup-label1{
+    position: absolute;
+    margin-top: 18px;
+    margin-left: 15px;
+    transition: 0.2s ease;
+}
+#signup-label2{
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 15px;
+    transition: 0.2s ease;
+}
+#signup-label3{
+    position: absolute;
+    margin-top: 128px;
+    margin-left: 15px;
+    transition: 0.2s ease;
+}
+#signupUsername:focus,#signupUsername:valid,
+#signupPassword:focus,#signupPassword:valid,
+#signupName:focus,#signupName:valid{
+    border: 1px solid var(--blue);
+}
+#signupUsername:focus+#signup-label2,
+#signupUsername:valid+#signup-label2,
+#signupPassword:focus+#signup-label3,
+#signupPassword:valid+#signup-label3,
+#signupName:focus+#signup-label1,
+#signupName:valid+#signup-label1{
+    transform: translate(-15px,-15px) scale(0.8) ;
+    z-index: 1111;
+    height: 15px;
+    padding: 2px;
+    line-height: 15px;
+    background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------------*/
+.popular-car .brands{
+    margin-left: 14px;
+    font-size: 30px; 
+    padding: 20px;
+}
+.popular-car{
+    background-color: rgba(245, 245, 245, 0.804);
+}
+.popular{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-bottom: 50px;
+    margin-left: 20px;
+}
+.pop-1{
+    height: 320px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: white;
+}
+.pop-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pop-details{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    height: 25px;
+}
+.pop-rate{
+    align-self: right;
+}
+.pop-but{
+    width: 100%;
+    background-color: #5d89e7;
+    border-radius: 5px;
+    padding:8px ;
+    border: none;
+    color: white;
+    margin-top: 10px;
+}
+.pop-para{
+    font-size: 17px;
+    margin-left: 5px;
+}
+
+
+/*-------------Blog-section------------*/
+
+.blog-list{
+    list-style: number;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 8px;
+}
+.blog-section{
+    background-color: rgba(250, 235, 215, 0.221);
+}
+.blog h3{
+    font-family: "SUSE", sans-serif;
+}
+.blog{
+    padding: 30px;
+}
+.blog p{
+    margin: 8px;
+    font-family: "SUSE", sans-serif;
+}
+.high{
+    list-style: disc;
+    font-family: "SUSE", sans-serif;
+    margin: 6px;
+}
+.blog ul{
+    display: block;
+}
+.blog .blog-head{
+    margin: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    font-family: "SUSE", sans-serif;
+}
+.blog li{
+    font-family: "SUSE", sans-serif;
+}
+.blog .blog-para{
+    margin: 15px;
+}
+.blog-images img{
+    height: 200px;
+    width: 370px;
+    margin: 5px;
+}
+.blog-images{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.blog-s2{
+    background-color: white;
+}
+
+
 /*-------------Media-------------------------------*/
 
 @media (max-width:850px){
@@ -870,6 +1226,33 @@ h3{
         border-radius: 6px;
         width: 70px;
     }
+    #login-extra{
+        font-size: 11px;
+        color: rgba(0, 0, 0, 0.694);
+        margin-top: 4px;
+    }
+    .login-head,.signup-head{
+        font-size: 20px;
+        margin: 4px;
+        font-weight: 600;
+    }
+    .login-para{
+        font-size: 12px;
+        margin: 5px;
+        color: rgba(0, 0, 0, 0.694);
+    }
+    .login-details,.signup-details{
+        width: 53%;
+    }
+    .login,.signup{
+        margin-top: 8%;
+        height: 70%;
+        width: 75%;
+    }
+    .login-content,.signup-content{
+        padding: 10px;
+        margin-top: 15px;
+    }
 }
 @media (max-width:568px){
     .hero-image{
@@ -894,16 +1277,21 @@ h3{
         display: flex;
         background-color: white;
     }
+    .link{
+        align-self: center;
+    }
     .links{
         display: none;
-        justify-content: space-evenly;
+        justify-content: center;
+        left: 0;
+        right: 0;
         align-items: center;
         position: fixed;
         margin-top: 70px;
         width: 80%;
+        min-height: 53vh;
         border-radius: 0px;
-        min-height: 50vh;
-        border-radius: none;
+        text-align: center;
         background-color: transparent;
         background-image: linear-gradient(rgba(254, 254, 255, 0.808),rgba(255, 255, 255, 0.813));
     }
@@ -1106,6 +1494,95 @@ h3{
         border-radius: 5px;
         width: 50px;
     }
+    #login-extra{
+        font-size: 9px;
+        margin-top: 5px;
+    }
+    .login-head,.signup-head{
+        font-size: 15px;
+        margin: 4px;
+        font-weight: 600;
+    }
+    .login-para{
+        font-size: 8px;
+        margin: 5px;
+    }
+    .login-details,.signup-details{
+        width: 58%;
+    }
+    .login,.signup{
+        margin-top: 15%;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: 55%;
+        width: 75%;
+    }
+    .login-content,.signup-content{
+        padding: 10px;
+        margin-top: 15px;
+    }
+    .modal-btn {
+        width: 80px;
+        padding: 5px;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 90%;
+        padding: 4px;
+        margin: 5px 0;
+    }
+    #signupUsername,#signupPassword,#signupName{
+        width: 90%;
+        padding: 5px;
+        margin: 6px 0;
+    }
+    #login-label1{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-left: 12px;
+    }
+    #login-label2{
+        font-size: 12px;
+        margin-top: 46px;
+        margin-left: 12px;
+    }
+    #loginUsername:focus+#login-label1,
+    #loginUsername:valid+#login-label1{
+        transform: translate(-12.5px,-12.5px) scale(0.8) ;
+    }
+    #loginPassword:focus+#login-label2,
+    #loginPassword:valid+#login-label2{
+        transform: translate(-12.5px,-12.5px) scale(0.8) ;
+    }
+    .close {
+        font-size: 20px;
+    }
+    #signup-label1{
+        margin-top: 12px;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    #signup-label2{
+        margin-top: 52px;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    #signup-label3{
+        margin-top: 91px;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+    #signupUsername:focus+#signup-label2,
+    #signupUsername:valid+#signup-label2,
+    #signupPassword:focus+#signup-label3,
+    #signupPassword:valid+#signup-label3,
+    #signupName:focus+#signup-label1,
+    #signupName:valid+#signup-label1{
+        transform: translate(-13px,-13px) scale(0.8) ;
+    }
 }
 @media (max-width:395px){
     .hero-image{
@@ -1162,7 +1639,7 @@ h3{
     }
     .switch-para{
         font-size: 9px;
-        margin-left: 10px;
+        margin-left: 10px; 
     }
     .button4{
         height: 20px;
@@ -1316,238 +1793,89 @@ h3{
         border-radius: 8px;
         color: white;
     }
+    #login-extra{
+        font-size: 7px;
+        margin-top: 4px;
+    }
+    .login-head,.signup-head{
+        font-size: 12px;
+    }
+    .login-para{
+        font-size: 8px;
+        margin: 2px;
+    }
+    .login-details,.signup-details{
+        width: 55%;
+    }
+    .login,.signup{
+        margin-top: 25%;
+        margin-left: 7%;
+        margin-right: 7%;
+        height: 45%;
+        width: 85%;
+    }
+    .login-content,.signup-content{
+        padding: 8px;
+        margin-top: 10px;
+    }
+    .modal-btn {
+        width: 55px;
+        padding: 0px;
+        border-radius: 10px;
+        font-size: 10px;
+        margin-top: 8px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 95%;
+        padding: 2px;
+        margin: 4px 0;
+    }
+    #signupUsername,#signupPassword,#signupName{
+        width: 95%;
+        padding: 2px;
+        margin: 4px 0;
+    }
+    #login-label1{
+        font-size: 10px;
+        margin-top: 9px;
+        margin-left: 10px;
+    }
+    #login-label2{
+        font-size: 10px;
+        margin-top: 38px;
+        margin-left: 10px;
+    }
+    .close {
+        font-size: 18px;
+    }
+    #signup-label1{
+        margin-top: 10px;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    #signup-label2{
+        margin-top: 37px;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    #signup-label3{
+        margin-top: 68px;
+        font-size: 10px;
+        margin-left: 10px;
+    }
+    #signupUsername:focus+#signup-label2,
+    #signupUsername:valid+#signup-label2,
+    #signupPassword:focus+#signup-label3,
+    #signupPassword:valid+#signup-label3,
+    #signupName:focus+#signup-label1,
+    #signupName:valid+#signup-label1{
+        transform: translate(-9px,-13px) scale(0.8) ;
+    }
 }
 @media (max-width:1000px){
     #popular-car .popular .pop-1{
         margin: 5px;
     }
-}
-
-/*--------Page not found-------------*/
-
-.not-found-section{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(48, 87, 163);
-}
-.page-image{
-    margin-left: 60px;
-    margin-right: 60px;
-}
-.page-found-para{
-    padding: 10px;
-    align-self: center;
-    font-size: 15px;
-    color: white;
-    background-color: rgb(48, 87, 163);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Modal Styles */
-.login-section,.signup-section{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-    justify-content: center;
-    align-items: center;
-}
-
-.login,.signup{
-    background-color: aliceblue;
-    margin-left: 15%;
-    margin-right:15%;
-    margin-top: 5%;
-    padding: 20px;
-    border: 1px solid #888;
-    height: 70%;
-    width: 63%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-}
-.login-details{
-    display: inline-flex;
-    flex-direction: row;
-    align-self: center;
-}
-.close {
-    color: #5d89e7;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.close:hover,
-.close:focus {
-    transform: scale(1rem);
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-.login-content{
-    height: 100%;
-    background-color: white;
-}
-.login-image{
-    width: 50%;
-}
-.login-image img{
-    height:250px;
-    width: 400px;
-}
-
-.modal-btn {
-    width: 40%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #5cb85c;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-.modal-btn:hover {
-    background-color: #4cae4c;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 40%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/*-----------------------------------*/
-.popular-car .brands{
-    margin-left: 14px;
-    font-size: 30px; 
-    padding: 20px;
-}
-.popular-car{
-    background-color: rgba(245, 245, 245, 0.804);
-}
-.popular{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding-bottom: 50px;
-    margin-left: 20px;
-}
-.pop-1{
-    height: 320px;
-    width: 200px;
-    border: 1px solid black;
-    margin: 10px;
-    border-radius: 8px;
-    padding: 12px;
-    background-color: white;
-}
-.pop-2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.pop-details{
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    height: 25px;
-}
-.pop-rate{
-    align-self: right;
-}
-.pop-but{
-    width: 100%;
-    background-color: #5d89e7;
-    border-radius: 5px;
-    padding:8px ;
-    border: none;
-    color: white;
-    margin-top: 10px;
-}
-.pop-para{
-    font-size: 17px;
-    margin-left: 5px;
-}
-
-
-/*-------------Blog-section------------*/
-
-.blog-list{
-    list-style: number;
-    font-size: 20px;
-    font-weight: 500;
-    margin: 8px;
-}
-.blog-section{
-    background-color: rgba(250, 235, 215, 0.221);
-}
-.blog h3{
-    font-family: "SUSE", sans-serif;
-}
-.blog{
-    padding: 30px;
-}
-.blog p{
-    margin: 8px;
-    font-family: "SUSE", sans-serif;
-}
-.high{
-    list-style: disc;
-    font-family: "SUSE", sans-serif;
-    margin: 6px;
-}
-.blog ul{
-    display: block;
-}
-.blog .blog-head{
-    margin: 10px;
-    font-weight: 600;
-    font-size: 30px;
-    font-family: "SUSE", sans-serif;
-}
-.blog li{
-    font-family: "SUSE", sans-serif;
-}
-.blog .blog-para{
-    margin: 15px;
-}
-.blog-images img{
-    height: 200px;
-    width: 370px;
-    margin: 5px;
-}
-.blog-images{
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.blog-s2{
-    background-color: white;
 }

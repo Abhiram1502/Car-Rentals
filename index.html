@@ -43,22 +43,27 @@
     <div id="login-section" class="login-section">
         <div class="login">
             <div class="login-details">
-                <div class="login-image">
-                    <img src="images/land-rover.png" alt="LR">
-                </div>
+                <span class="close" onclick="closeModal('login-section')">&times;</span>
                 <div class="login-content">
-                    <h2>Login In Your Account</h2>
-                    <form action="#" method="post">
-                        <label for="loginUsername">Username</label>
+                    <h2 class="login-head">Welcome Back!</h2>
+                    <p class="login-para">Log in now to explore all the features and benifits of our platform and see what's new</p>
+                    <form action="#" method="post" class="login-form">
                         <input type="text" id="loginUsername" name="username" required>
-                        <label for="loginPassword">Password</label>
+                        <label id="login-label1" for="loginUsername">Enter your Email</label>
                         <input type="password" id="loginPassword" name="password" required>
-                        <button type="submit" class="modal-btn">Login</button>
+                        <label id="login-label2" for="loginPassword">Enter your Password</label>
+                        <div class="login-extras flex" style="justify-content: space-between;">
+                            <div id="login-extra" >
+                                <input id="Remember" type="checkbox">
+                                <label for="Remember">Remember my account</label>
+                            </div>
+                            <a id="login-extra">Forget password?</a>
+                        </div>
+                        <div><button type="submit" class="modal-btn">Login</button></div>
                     </form>
-                    <a>Forget password?</a>
+                    <p id="login-extra">Don't have an account<br><a style="text-decoration: underline;cursor: pointer;" onclick="popChange('login-section')">Sign Up</a> >></p>
                 </div>
             </div>
-            <span class="close" onclick="closeModal('login-section')">&times;</span>
         </div>
     </div>
 
@@ -66,38 +71,30 @@
 
     <div id="signup-section" class="signup-section">
         <div class="signup">
-            <span class="close" onclick="closeModal('signup-section')">&times;</span>
-            <h2>Sign Up</h2>
-            <form action="#" method="post">
-                <label for="signupUsername">Username</label>
-                <input type="text" id="signupUsername" name="username" required>
-                <label for="signupEmail">Email</label>
-                <input type="email" id="signupEmail" name="email" required>
-                <label for="signupPassword">Password</label>
-                <input type="password" id="signupPassword" name="password" required>
-                <button type="submit" class="modal-btn">Sign Up</button>
-            </form>
+            <div class="signup-details">
+                <span class="close" onclick="closeModal('signup-section')">&times;</span>
+                <div class="signup-content">
+                    <h2 class="signup-head">Create An Account</h2>
+                    <form action="#" method="post" class="signup-form">
+                        <input type="text" id="signupName" name="username" required>
+                        <label id="signup-label1" for="signupUsername">Name</label>
+                        <input type="text" id="signupUsername" name="username" required>
+                        <label id="signup-label2" for="signupUsername">Enter your Email</label>
+                        <input type="password" id="signupPassword" name="password" required>
+                        <label id="signup-label3" for="signupPassword">Enter your Password</label>
+                        <div class="login-extras flex" style="justify-content: space-between;">
+                            <div id="login-extra" >
+                                <input id="Remember" type="checkbox">
+                                <label for="Remember">Remember my account</label>
+                            </div>
+                        </div>
+                        <div><button type="submit" class="modal-btn">SignUp</button></div>
+                    </form>
+                    <p id="login-extra">Already have an account<br><a style="text-decoration: underline;cursor: pointer;" onclick="popChange('signup-section')">Login</a> >></p>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script>
-        // Open modal
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-        }
-
-        // Close modal
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        }
-
-        // Close modal when clicking outside of it
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        }
-    </script>
 
 <!------------------------------------------------------hero-section----------------------------------------------------------->
     <section class="hero-section" id="Home">
@@ -167,15 +164,15 @@
         <div class="pop-1">
             <h3  class="car-head">Mini</h3>
             <p class="pop-para">Suzuki Celerio or Similar</p>
-            <img  class="pop-img" src="images/car1.png" alt="" height="130px" width="190px">
+            <img loading="lazy" class="pop-img" src="images/car1.png" alt="" height="130px" width="190px">
             <div class="pop-details">
-                <img src="images/1.png" alt="" height="35px" width="35px">
+                <img loading="lazy" src="images/1.png" alt="" height="35px" width="35px">
                 <p>4</p>
-                <img src="images/2.png" alt="" height="35px" width="35px">
+                <img loading="lazy" src="images/2.png" alt="" height="35px" width="35px">
                 <p>2</p>
-                <img src="images/3.png" alt="" height="35px" width="35px">
+                <img loading="lazy" src="images/3.png" alt="" height="35px" width="35px">
                 <p>4</p>
-                <img src="images/4.png" alt="" height="35px" width="35px">
+                <img loading="lazy" src="images/4.png" alt="" height="35px" width="35px">
                 <p>Man</p>
             </div>
             <div class="pop-rate">
@@ -390,3 +387,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+ 
