@@ -704,7 +704,7 @@ h3{
     margin-right:15%;
     margin-top: 5%;
     border: 1px solid #888;
-    height: 70%;
+    height: 440px;
     width: 63%;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -826,6 +826,7 @@ h3{
 .login-head,.signup-head{
     font-size: 25px;
     margin: 8px;
+    font-weight: 600;
 }
 .login-para{
     font-size: 13px;
@@ -1244,7 +1245,7 @@ h3{
     }
     .login,.signup{
         margin-top: 8%;
-        height: 70%;
+        height: 350px;
         width: 75%;
     }
     .login-content,.signup-content{
@@ -1512,7 +1513,7 @@ h3{
         margin-top: 15%;
         margin-left: 10%;
         margin-right: 10%;
-        height: 55%;
+        height: 270px;
         width: 75%;
     }
     .login-content,.signup-content{
